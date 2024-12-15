@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import { generateUser } from '../../support/login-commands.js';
+import { generateUser } from '../../support/commands.js';
 
 describe('cadastrar novo usuario', () => {
     
