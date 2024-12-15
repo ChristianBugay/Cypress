@@ -47,6 +47,7 @@ Cypress.Commands.add('loginBackend', () => {
         expect(response.status).to.equal(200)
         expect(response.body.message).to.eql('Login realizado com sucesso')
         expect(response.body.authorization).to.exist
+        Cypress.env('authToken', response.body.authorization)
     })
 })
 
@@ -85,12 +86,12 @@ Cypress.Commands.add('tokenError', (product) => {
     });
 })
 
-Cypress.Commands.add('newProduct', (product, token) => {
+Cypress.Commands.add('newProduct', (product) => {
     cy.request({
         method: 'POST',
         url: 'https://serverest.dev/produtos',
         headers: {
-            "Authorization": token
+            "Authorization": Cypress.env('authToken')
         },
         body: {
             "nome": product.name,

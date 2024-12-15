@@ -7,7 +7,7 @@ describe('Cadastrar novo produto', () => {
     it('Cadastrar novo produto com sucesso', () => {
         const product = generateProduct()
         cy.loginBackend()
-        cy.newProduct(product, token)
+        cy.newProduct(product)
     }),
     it('Erro de token ao tentar cadastrar produto', () => {
         const product = generateProduct()
