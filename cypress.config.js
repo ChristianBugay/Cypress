@@ -6,5 +6,6 @@ module.exports = defineConfig({
       
     },
     chromeWebSecurity: false,
+    experimentalSessionAndOrigin: true
   }
 });

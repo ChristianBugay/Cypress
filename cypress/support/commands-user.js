@@ -102,6 +102,7 @@ Cypress.Commands.add('newProduct', (product) => {
         failOnStatusCode: false
     }).then((response) => {
         expect(response.status).to.equal(201);
-        //mais validações
+        expect(response.body.message).to.eql('Cadastro realizado com sucesso')
+        expect(response.body._id).to.exist
     });
 })
