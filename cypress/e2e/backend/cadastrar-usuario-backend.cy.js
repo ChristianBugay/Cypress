@@ -1,20 +1,14 @@
 /// <reference types="cypress" />
 
 import { generateUser } from '../../support/commands.js';
+import { registerNewUser } from '../../support/commands-user.js';
 
-describe('cadastrar novo usuario', () => {
-    
-    it('cadastrar usuario com sucesso', () => {
-        const person = generateUser()
-        cy.request({
-            method: 'POST',
-            url: 'https://serverest.dev/usuarios',
-            body: {
-                "nome": person.user,
-                "email": person.email,
-                "password": person.password,
-                "administrador": "true"
-            }
-        })
+describe('Funcionalidade de cadastro de usuario', () => {
+    const person = generateUser()
+    it('Cadastrar usuario com sucesso', () => {
+        cy.registerNewUser(person)
+    });
+    it('Validar email de usuario ja cadastrado', () => {
+        cy.validateEmailUser(person)
     });
 });
