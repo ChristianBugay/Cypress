@@ -1,5 +1,4 @@
 /// <reference types="cypress" />
-
 import { generateUser } from '../../support/commands.js';
 import { registerNewUser } from '../../support/commands-user.js';
 

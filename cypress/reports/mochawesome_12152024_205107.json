@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-12-15T23:50:55.012Z",
+    "end": "2024-12-15T23:51:07.036Z",
+    "duration": 12024,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "84f2d7b1-6066-40ae-a92f-4ece68654402",
+      "title": "",
+      "fullFile": "cypress\\e2e\\frontend\\step-definitions\\cadastrar-usuario-ecommerce.cy.js",
+      "file": "cypress\\e2e\\frontend\\step-definitions\\cadastrar-usuario-ecommerce.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3e697c8b-8282-4f7c-9132-3ee8826dad3f",
+          "title": "Funcionalidade de cadastro de usuario para ecommerce",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Cadastrar usuario para ecommerce com sucesso",
+              "fullTitle": "Funcionalidade de cadastro de usuario para ecommerce Cadastrar usuario para ecommerce com sucesso",
+              "timedOut": null,
+              "duration": 6259,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('URL'));\ncy.login(Cypress.env('USER_EMAIL'), Cypress.env('USER_PASSWORD'), Cypress.env('USER_NAME'));\nconst newUser = (0, _commands.generateUser)();\ncy.registerNewUser(newUser);",
+              "err": {},
+              "uuid": "2b0e8dda-62d2-4004-893f-3ea708b5868a",
+              "parentUUID": "3e697c8b-8282-4f7c-9132-3ee8826dad3f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Erro ao cadastrar usuario para ecommerce",
+              "fullTitle": "Funcionalidade de cadastro de usuario para ecommerce Erro ao cadastrar usuario para ecommerce",
+              "timedOut": null,
+              "duration": 3346,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('URL'));\ncy.login(Cypress.env('USER_EMAIL'), Cypress.env('USER_PASSWORD'), Cypress.env('USER_NAME'));\nconst newUser = (0, _commands.generateUser)();\ncy.errorRegisterNewUser(newUser);",
+              "err": {},
+              "uuid": "190ed7cf-e2f0-4f9a-b598-d0b69e892b68",
+              "parentUUID": "3e697c8b-8282-4f7c-9132-3ee8826dad3f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2b0e8dda-62d2-4004-893f-3ea708b5868a",
+            "190ed7cf-e2f0-4f9a-b598-d0b69e892b68"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9605,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,5 +1,4 @@
 /// <reference types="cypress" />
-
 import { generateProduct } from '../../support/commands.js';
 import { loginBackend, tokenError } from '../../support/commands-user.js';
 

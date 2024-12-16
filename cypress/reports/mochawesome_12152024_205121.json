@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-12-15T23:51:10.029Z",
+    "end": "2024-12-15T23:51:21.062Z",
+    "duration": 11033,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "afccea69-282a-42db-9243-956af5a5d1a5",
+      "title": "",
+      "fullFile": "cypress\\e2e\\frontend\\step-definitions\\cadastrar-usuario.cy.js",
+      "file": "cypress\\e2e\\frontend\\step-definitions\\cadastrar-usuario.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f6669d64-d00f-4234-87fa-442a0f2ca9dd",
+          "title": "Funcionalidade de cadastro de usuario de sistema",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Cadastrar usuario de sistema com sucesso",
+              "fullTitle": "Funcionalidade de cadastro de usuario de sistema Cadastrar usuario de sistema com sucesso",
+              "timedOut": null,
+              "duration": 6597,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('URL'));\nconst person = (0, _commands.generateUser)();\ncy.signIn(person);",
+              "err": {},
+              "uuid": "470edf97-f78d-45d8-9533-5b5410ef3d36",
+              "parentUUID": "f6669d64-d00f-4234-87fa-442a0f2ca9dd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Erro ao cadastrar usuario de sistema",
+              "fullTitle": "Funcionalidade de cadastro de usuario de sistema Erro ao cadastrar usuario de sistema",
+              "timedOut": null,
+              "duration": 2006,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env('URL'));\ncy.errorSignIn();",
+              "err": {},
+              "uuid": "660c3ee4-525e-425e-a9aa-02ce5fdce037",
+              "parentUUID": "f6669d64-d00f-4234-87fa-442a0f2ca9dd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "470edf97-f78d-45d8-9533-5b5410ef3d36",
+            "660c3ee4-525e-425e-a9aa-02ce5fdce037"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8603,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

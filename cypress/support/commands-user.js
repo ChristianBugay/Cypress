@@ -1,5 +1,3 @@
-import {faker} from '@faker-js/faker'
-
 Cypress.Commands.add('registerNewUser', (person) => {
     cy.request({
         method: 'POST',
